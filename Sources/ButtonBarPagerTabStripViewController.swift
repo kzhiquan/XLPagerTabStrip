@@ -247,6 +247,10 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
         return CGSize(width: cellWidthValue, height: collectionView.frame.size.height)
     }
     
+    open func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.item != currentIndex else { return }
         
